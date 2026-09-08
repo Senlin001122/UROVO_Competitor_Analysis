@@ -88,7 +88,12 @@ function drawCard(side,p){if(!p)return;$('#'+side+'-model').textContent=p.model;
 function pairRows(){const l=current(leftId),r=current(rightId);if(!l||!r)return[];return[...new Set([...Object.keys(l.params),...Object.keys(r.params)])].filter(k=>!['品牌','型号'].includes(k)).map(k=>({key:k,left:l.params[k]||'未提供',right:r.params[k]||'未提供',category:cat(k),diff:normalize(l.params[k]||'未提供')!==normalize(r.params[k]||'未提供')}))}
 function filteredRows(){const q=$('#search').value.toLowerCase().trim();return pairRows().filter(r=>(category==='全部参数'||r.category===category)&&(!$('#only-diff').checked||r.diff)&&(!q||[r.key,r.left,r.right].some(x=>x.toLowerCase().includes(q))))}
 function render(){
- const l=current(leftId),r=current(rightId);drawCard('left',l);drawCard('right',r);$('#pair-label').textContent=(l?.model||'')+' 对比 '+(r?.model||'');
+ const l=current(leftId),r=current(rightId);drawCard('left',l);drawCard('right',r);const pairLabel=$('#pair-label');
+
+if(pairLabel){
+  pairLabel.textContent=
+  (l?.model||'')+' 对比 '+(r?.model||'');
+}
  const rows=pairRows();$('#parameter-count').textContent=rows.length+' 项参数';$('#diff-count').textContent=rows.filter(x=>x.diff).length;
  $('#categories').replaceChildren(...categories.filter(c=>c==='全部参数'||rows.some(r=>r.category===c)).map(c=>{const b=el('button','',c);b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',c===category);b.onclick=()=>{category=c;render()};b.onkeydown=e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const tabs=$$('#categories button'),idx=tabs.indexOf(b),next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(idx+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();$$('#categories button')[next].focus()};return b}));
  const visible=filteredRows(),body=$('#rows');body.replaceChildren();for(const c of categories.slice(1)){const items=visible.filter(x=>x.category===c);if(!items.length)continue;const head=el('tr','group-row'),cell=el('td','',c+' / '+String(items.length).padStart(2,'0'));cell.colSpan=3;head.append(cell);body.append(head);for(const item of items){const tr=el('tr',item.diff?'different':'');tr.append(el('td','',item.key));for(const v of [item.left,item.right])tr.append(el('td',/^(未公开|未提供|未列)/.test(v)?'value-missing':'',v));body.append(tr)}}
