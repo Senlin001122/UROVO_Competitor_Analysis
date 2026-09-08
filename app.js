@@ -6,7 +6,26 @@ function cat(key){if(/品牌|型号|特点|操作系统|处理器|CPU|内存|扩
 function all(){return[...data.groups.flatMap(g=>g.products),...local]}
 function current(id){return all().find(p=>p.id===id)}
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
-function toast(t){$('#toast').textContent=t;$('#toast').hidden=false;setTimeout(()=>$('#toast').hidden=true,3500)}
+function toast(t){
+
+  console.log(t);
+
+  const box=$('#toast');
+
+  if(!box)return;
+
+  box.textContent=t;
+
+  box.hidden=false;
+
+
+  setTimeout(()=>{
+
+    box.hidden=true;
+
+  },3500);
+
+}
 function option(p){const o=el('option','',p.name+(p.imported?' · 本地导入':''));o.value=p.id;return o}
 function initSelectors(){
 
