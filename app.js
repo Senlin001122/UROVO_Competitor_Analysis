@@ -103,7 +103,39 @@ function showMatrix(){const sheet=importSheets[Number($('#import-sheet').value)|
 async function upload(file){if(!file)return;const job=++importJob;$('#import-preview').hidden=true;$('#confirm-import').disabled=true;status('正在本地读取并提取参数…');try{const result=await extractDocument(file);if(job!==importJob)return;importSheets=result;sourceName=file.name;$('#import-sheet').replaceChildren(...result.map((s,i)=>{const o=el('option','',s.name);o.value=String(i);return o}));showMatrix();$('#import-preview').hidden=false}catch(e){if(job===importJob)status(e.message||'提取失败，请检查文件格式。',true)}finally{if(job===importJob)$('#confirm-import').disabled=false}}
 async function init(){try{const response=await fetch('./data.json');if(!response.ok)throw Error('参考数据暂时无法加载，请刷新页面重试。');data=await response.json();try{const saved=JSON.parse(localStorage.getItem(storeKey)||'[]');if(Array.isArray(saved))local=saved.filter(p=>p&&typeof p.id==='string'&&typeof p.name==='string'&&p.params&&typeof p.params==='object'&&p.imported)}catch{local=[]}
  leftId=data.groups[0].products.find(p=>p.urovo).id;rightId=data.groups[0].products.find(p=>!p.urovo).id;initSelectors();render();
- $('#left-product').onchange=e=>selectLeft(e.target.value);$('#right-product').onchange=e=>{rightId=e.target.value;render()};$('#all-products').onchange=()=>{initSelectors();render()};$('#only-diff').onchange=render;$('#search').oninput=render;$('#export').onclick=exportRows;
+$('#left-product').onchange=e=>selectLeft(e.target.value);
+
+$('#right-product').onchange=e=>{
+  rightId=e.target.value;
+  render();
+};
+
+
+$('#all-products')?.addEventListener(
+  'change',
+  ()=>{
+    initSelectors();
+    render();
+  }
+);
+
+
+$('#only-diff')?.addEventListener(
+  'change',
+  render
+);
+
+
+$('#search')?.addEventListener(
+  'input',
+  render
+);
+
+
+$('#export')?.addEventListener(
+  'click',
+  exportRows
+);
  $$('[data-upload]').forEach(b=>b.onclick=()=>{localList();$('#import-dialog').showModal()});$('#upload-file').onchange=e=>upload(e.target.files[0]);$('#import-sheet').onchange=showMatrix;const drop=$('#dropzone');drop.ondragover=e=>{e.preventDefault();drop.classList.add('over')};drop.ondragleave=()=>drop.classList.remove('over');drop.ondrop=e=>{e.preventDefault();drop.classList.remove('over');upload(e.dataTransfer.files[0])};
  $('#confirm-import').onclick=()=>{try{const matrix=rowsToMatrix(csvRows($('#import-text').value,'\t'));const added=matrixToProducts(matrix,$('#import-side').value,sourceName+' / '+importSheets[Number($('#import-sheet').value)||0].name);saveLocal([...local,...added]);if(added[0].urovo)leftId=added[0].id;else rightId=added[0].id;$('#only-diff').checked=false;$('#search').value='';category='全部参数';initSelectors();render();$('#import-dialog').close();toast(`已加入 ${added.length} 个产品，保存在当前浏览器`)}catch(e){status(e.message,true)}};
  }catch(e){$('#pair-label').textContent=e.message;toast(e.message)}}
