@@ -3,32 +3,55 @@
 // 替换原 initSelectors()
 
 function initSelectors(){
+
+  // 左侧 UROVO 产品
   $('#left-product').replaceChildren(
-    ...all().filter(p=>p.urovo).map(option)
-  );
-  $('#left-product').value=leftId;
-
-  const group=data.groups.find(
-    g=>g.products.some(p=>p.id===leftId)
+    ...all()
+      .filter(p=>p.urovo)
+      .map(option)
   );
 
-  let right=group
-    ? group.products.filter(p=>!p.urovo)
-    : all().filter(p=>!p.urovo);
+  $('#left-product').value = leftId;
 
+
+  // 找当前 UROVO 产品所属分组
+  const group = data.groups.find(
+    g => g.products.some(
+      p => p.id === leftId
+    )
+  );
+
+
+  // 只取当前组里的竞品
+  let right = group
+    ? group.products.filter(
+        p => !p.urovo
+      )
+    : [];
+
+
+  // 防止没有匹配
   if(!right.length){
-    right=all().filter(p=>!p.urovo);
+    right = all().filter(
+      p => !p.urovo
+    );
   }
 
-  if(!right.some(p=>p.id===rightId)){
-    rightId=right[0]?.id;
+
+  // 如果当前竞品不在列表里，重置
+  if(!right.some(
+      p => p.id === rightId
+  )){
+      rightId = right[0]?.id;
   }
+
 
   $('#right-product').replaceChildren(
     ...right.map(option)
   );
 
-  $('#right-product').value=rightId;
+
+  $('#right-product').value = rightId;
 }
 
 
