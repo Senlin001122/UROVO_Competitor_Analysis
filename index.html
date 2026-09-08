@@ -1,0 +1,37 @@
+<!-- index.html 修复说明版
+1. 保留你原来的 HTML。
+2. 删除 </main></div> 中多余的 </div>。
+3. 将 brand-page 放到 main 后面。
+4. 保留 Dock。
+-->
+
+<!-- 原位置：
+</main></div>
+
+<section id="brand-page" class="brand-page" hidden>
+-->
+
+<!-- 修改为：
+
+</main>
+
+<section id="brand-page" class="brand-page" hidden>
+  <div class="brand-hero">
+    <div class="eyebrow">COMPETITOR ECOSYSTEM</div>
+    <h1>竞品品牌生态<span>.</span></h1>
+    <p>探索全球支付终端品牌与市场生态。</p>
+  </div>
+  <div id="brand-grid" class="brand-grid"></div>
+</section>
+
+<nav class="liquid-dock" aria-label="主导航">
+  <button class="dock-item active" id="dock-compare">
+    <span class="dock-icon">⌂</span>
+    <span>产品对比</span>
+  </button>
+  <button class="dock-item" id="dock-brands">
+    <span class="dock-icon">◇</span>
+    <span>竞品品牌</span>
+  </button>
+</nav>
+-->
