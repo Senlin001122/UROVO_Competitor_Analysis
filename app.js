@@ -111,13 +111,7 @@ $('#right-product').onchange=e=>{
 };
 
 
-$('#all-products')?.addEventListener(
-  'change',
-  ()=>{
-    initSelectors();
-    render();
-  }
-);
+
 
 
 $('#only-diff')?.addEventListener(
