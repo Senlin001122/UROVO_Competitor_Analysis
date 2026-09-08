@@ -9,10 +9,26 @@ function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className
 function toast(t){$('#toast').textContent=t;$('#toast').hidden=false;setTimeout(()=>$('#toast').hidden=true,3500)}
 function option(p){const o=el('option','',p.name+(p.imported?' · 本地导入':''));o.value=p.id;return o}
 function initSelectors(){
- $('#left-product').replaceChildren(...all().filter(p=>p.urovo).map(option));$('#left-product').value=leftId;
- let right=all().filter(p=>!p.urovo);
- if(!right.length)right=all().filter(p=>!p.urovo);if(!right.some(p=>p.id===rightId))rightId=right[0]?.id;
- $('#right-product').replaceChildren(...right.map(option));$('#right-product').value=rightId;
+ $('#left-product').replaceChildren(...all().filter(p=>p.urovo).map(option));
+ $('#left-product').value=leftId;
+
+ // 根据左侧产品所属分组筛选竞品
+ const group=data.groups.find(g =>
+     g.products.some(p=>p.id===leftId)
+ );
+
+ let right = group
+     ? group.products.filter(p=>!p.urovo)
+     : all().filter(p=>!p.urovo);
+
+ if(!right.length)
+     right=all().filter(p=>!p.urovo);
+
+ if(!right.some(p=>p.id===rightId))
+     rightId=right[0]?.id;
+
+ $('#right-product').replaceChildren(...right.map(option));
+ $('#right-product').value=rightId;
 }
 function drawCard(side,p){if(!p)return;$('#'+side+'-model').textContent=p.model;$('#'+side+'-brand').textContent=p.brand;const img=$('#'+side+'-image');img.hidden=!p.image;$('#'+side+'-no-image').hidden=!!p.image;if(p.image){img.src=p.image;img.alt=p.name+' 产品图片';img.onerror=()=>{img.hidden=true;$('#'+side+'-no-image').hidden=false}}else img.removeAttribute('src');
  const keys=['操作系统（Android）','内存','LCD/LED'];$('#'+side+'-facts').replaceChildren(...keys.filter(k=>p.params[k]).map(k=>{const n=el('span','',p.params[k]);n.title=p.params[k];return n}));
