@@ -28,7 +28,7 @@
     "name": "商米 · SUNMI",
     "shortName": "SUNMI",
     "aliases": "支付与商业终端",
-    "logo": "assets/brand-logos/sunmi.svg",
+    "logo": "assets/brand-logos/sunmi.png",
     "website": "https://www.sunmi.com/"
   },
   {
@@ -49,11 +49,11 @@
   },
   {
     "id": "itwell",
-    "name": "艾体威尔 · ITWELL",
+    "name": "艾体威尔 · Aisino",
     "shortName": "ITWELL",
     "aliases": "文字标识 · Logo 待补充",
-    "logo": "",
-    "website": ""
+    "logo": "assets/brand-logos/aisino.png",
+    "website": "https://www.vanstone.com.cn/"
   },
   {
     "id": "verifone",
@@ -100,8 +100,8 @@
     "name": "世麦 · Smartpeak",
     "shortName": "Smartpeak",
     "aliases": "文字标识 · Logo 待补充",
-    "logo": "",
-    "website": ""
+    "logo": "assets/brand-logos/smartpeak.png",
+    "website": "http://www.smartpeak.com.cn/"
   },
   {
     "id": "feitian",
@@ -116,7 +116,7 @@
     "name": "鼎智 · Topwise",
     "shortName": "Topwise",
     "aliases": "文字标识 · Logo 待补充",
-    "logo": "",
+    "logo": "assets/brand-logos/topwise.png",
     "website": "https://www.topwisesz.com/"
   },
   {
