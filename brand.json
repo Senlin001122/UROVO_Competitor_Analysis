@@ -11,7 +11,7 @@
     "id": "kozen",
     "name": "祥承 · KOZEN",
     "shortName": "KOZEN",
-    "aliases": "祥承旗下支付品牌",
+    
     "logo": "assets/brand-logos/kozen.png",
     "website": "https://www.kozenglobal.com/"
   },
@@ -19,7 +19,7 @@
     "id": "newland",
     "name": "新大陆 · Newland NPT",
     "shortName": "Newland NPT",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/newland.svg",
     "website": "https://www.newlandnpt.com/"
   },
@@ -27,7 +27,7 @@
     "id": "sunmi",
     "name": "商米 · SUNMI",
     "shortName": "SUNMI",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/sunmi.png",
     "website": "https://www.sunmi.com/"
   },
@@ -35,7 +35,7 @@
     "id": "landi",
     "name": "联迪 · LANDI",
     "shortName": "LANDI",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/landi.svg",
     "website": "https://www.landiglobal.com/"
   },
@@ -43,7 +43,7 @@
     "id": "nexgo",
     "name": "新国都 · NEXGO",
     "shortName": "NEXGO",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/nexgo.svg",
     "website": "https://www.nexgoglobal.com/"
   },
@@ -51,7 +51,7 @@
     "id": "itwell",
     "name": "艾体威尔 · Aisino",
     "shortName": "ITWELL",
-    "aliases": "文字标识 · Logo 待补充",
+    
     "logo": "assets/brand-logos/aisino.png",
     "website": "https://www.vanstone.com.cn/"
   },
@@ -59,7 +59,7 @@
     "id": "verifone",
     "name": "惠尔丰 · Verifone",
     "shortName": "Verifone",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/verifone.svg",
     "website": "https://www.verifone.com/"
   },
@@ -67,7 +67,7 @@
     "id": "morefun",
     "name": "魔方 · MoreFun",
     "shortName": "MoreFun",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/morefun.png",
     "website": "https://www.morefun-pos.com/index.html"
   },
@@ -75,7 +75,7 @@
     "id": "centerm",
     "name": "升腾 · Centerm",
     "shortName": "Centerm",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/centerm.png",
     "website": "https://www.centerm.com/"
   },
@@ -83,7 +83,7 @@
     "id": "newpos",
     "name": "华智融 · NEWPOS",
     "shortName": "NEWPOS",
-    "aliases": "NEWPOSTech / NEWPOS",
+    
     "logo": "assets/brand-logos/newpos.png",
     "website": "https://www.newpostech.com/"
   },
@@ -91,7 +91,7 @@
     "id": "ingenico",
     "name": "银捷尼科 · Ingenico",
     "shortName": "Ingenico",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/ingenico.svg",
     "website": "https://ingenico.com/apac"
   },
@@ -99,7 +99,7 @@
     "id": "smartpeak",
     "name": "世麦 · Smartpeak",
     "shortName": "Smartpeak",
-    "aliases": "文字标识 · Logo 待补充",
+    
     "logo": "assets/brand-logos/smartpeak.png",
     "website": "http://www.smartpeak.com.cn/"
   },
@@ -107,7 +107,7 @@
     "id": "feitian",
     "name": "飞天诚信 · FEITIAN",
     "shortName": "FEITIAN",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/feitian.svg",
     "website": "https://portal.ftsafe.com/"
   },
@@ -115,7 +115,7 @@
     "id": "topwise",
     "name": "鼎智 · Topwise",
     "shortName": "Topwise",
-    "aliases": "文字标识 · Logo 待补充",
+    
     "logo": "assets/brand-logos/topwise.png",
     "website": "https://www.topwisesz.com/"
   },
@@ -123,7 +123,7 @@
     "id": "wiseasy",
     "name": "微智全景 · Wiseasy",
     "shortName": "Wiseasy",
-    "aliases": "支付与商业终端",
+    
     "logo": "assets/brand-logos/wiseasy.svg",
     "website": "https://www.wiseasy.com/"
   },
@@ -131,7 +131,7 @@
     "id": "telpo",
     "name": "天波 · Telpo",
     "shortName": "Telpo",
-    "aliases": "Telpo / Telepower",
+    
     "logo": "assets/brand-logos/telpo.png",
     "website": "https://www.telpo.com/"
   },
@@ -139,7 +139,7 @@
     "id": "imin",
     "name": "一敏 · iMin",
     "shortName": "iMin",
-    "aliases": "一敏 / iMin",
+    
     "logo": "assets/brand-logos/imin.svg",
     "website": "https://www.imintech.cn/zh/"
   }
