@@ -1,0 +1,196 @@
+[
+  {
+    "id": "pax",
+    "chineseName": "百富",
+    "displayName": "PAX",
+    "sourcePage": "https://www.paxtechnology.com/",
+    "status": "official-asset",
+    "assetUrl": "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,h_630,w_1200/852905/PAX_logo_1_irz9xh.png",
+    "mimeType": "image/png",
+    "localAsset": "assets/brand-logos/pax.png"
+  },
+  {
+    "id": "kozen",
+    "chineseName": "祥承",
+    "displayName": "KOZEN",
+    "sourcePage": "https://www.kozenglobal.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.kozenglobal.com/static/home/images/logo1.png",
+    "mimeType": "image/png",
+    "note": "Official white logo; display on dark background. KOZEN is the payment brand of 祥承, per xc-tech.com.",
+    "identitySource": "https://www.xc-tech.com/",
+    "localAsset": "assets/brand-logos/kozen.png"
+  },
+  {
+    "id": "newland",
+    "chineseName": "新大陆",
+    "displayName": "Newland NPT",
+    "sourcePage": "https://www.newlandnpt.com/",
+    "status": "official-inline-svg",
+    "assetUrl": "https://www.newlandnpt.com/#inline-logo",
+    "note": "Exact native SVG extracted from official page header; not redrawn.",
+    "localAsset": "assets/brand-logos/newland.svg"
+  },
+  {
+    "id": "sunmi",
+    "chineseName": "商米",
+    "displayName": "SUNMI",
+    "sourcePage": "https://www.sunmi.com/",
+    "status": "official-inline-svg",
+    "assetUrl": "https://www.sunmi.com/#inline-logo",
+    "note": "Exact native SVG extracted from official page header; not redrawn.",
+    "localAsset": "assets/brand-logos/sunmi.svg"
+  },
+  {
+    "id": "landi",
+    "chineseName": "联迪",
+    "displayName": "LANDI",
+    "sourcePage": "https://www.landiglobal.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.landiglobal.com/images/logo-dark.svg",
+    "mimeType": "image/svg+xml",
+    "localAsset": "assets/brand-logos/landi.svg"
+  },
+  {
+    "id": "nexgo",
+    "chineseName": "新国都",
+    "displayName": "NEXGO",
+    "sourcePage": "https://www.nexgoglobal.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.nexgoglobal.com/template/default/images/common/logo.svg",
+    "mimeType": "image/svg+xml",
+    "localAsset": "assets/brand-logos/nexgo.svg"
+  },
+  {
+    "id": "itwell",
+    "chineseName": "艾体威尔",
+    "displayName": "ITWELL",
+    "status": "text-fallback",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "note": "No verified logo found. ITWELL English identity supplied in brief; do not use Korean ITWell logo without confirming relationship.",
+    "attemptedPage": "https://www.itwell.com.cn/",
+    "sourcePage": null,
+    "localAsset": null
+  },
+  {
+    "id": "verifone",
+    "chineseName": "惠尔丰",
+    "displayName": "Verifone",
+    "sourcePage": "https://www.verifone.com/",
+    "status": "official-inline-svg",
+    "assetUrl": "https://www.verifone.com/#inline-logo",
+    "note": "Exact native SVG extracted from official page header; not redrawn.",
+    "localAsset": "assets/brand-logos/verifone.svg"
+  },
+  {
+    "id": "morefun",
+    "chineseName": "魔方",
+    "displayName": "MoreFun",
+    "sourcePage": "https://www.morefun-pos.com/index.html",
+    "status": "official-asset",
+    "assetUrl": "https://www.morefun-pos.com/style/images/logo_hover.png",
+    "mimeType": "image/png",
+    "localAsset": "assets/brand-logos/morefun.png"
+  },
+  {
+    "id": "centerm",
+    "chineseName": "升腾",
+    "displayName": "Centerm",
+    "sourcePage": "https://www.centerm.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.centerm.com/upload/__diy__/2025/06/17/115150l57omvb2ux305af2i8xc.png",
+    "mimeType": "image/png",
+    "localAsset": "assets/brand-logos/centerm.png"
+  },
+  {
+    "id": "newpos",
+    "chineseName": "华智融",
+    "displayName": "NEWPOS",
+    "sourcePage": "https://www.newpostech.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.newpostech.com/template/default/images/common/logoH.png",
+    "mimeType": "image/png",
+    "aliases": [
+      "NEWPOSTech",
+      "NEWPOSTECH",
+      "NEW POS Technology"
+    ],
+    "note": "Current official header logo reads NEWPOS.",
+    "localAsset": "assets/brand-logos/newpos.png"
+  },
+  {
+    "id": "ingenico",
+    "chineseName": "银捷尼科",
+    "displayName": "Ingenico",
+    "sourcePage": "https://ingenico.com/apac",
+    "status": "official-asset",
+    "assetUrl": "https://ingenico.com/themes/custom/ingenico/logo.svg?v=1",
+    "mimeType": "image/svg+xml",
+    "localAsset": "assets/brand-logos/ingenico.svg"
+  },
+  {
+    "id": "smartpeak",
+    "chineseName": "世麦",
+    "displayName": "Smartpeak",
+    "status": "text-fallback",
+    "error": "<urlopen error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。>",
+    "note": "Official candidate sites unavailable; use text fallback.",
+    "attemptedPage": "https://www.smartpeak.com.cn/",
+    "sourcePage": null,
+    "localAsset": null
+  },
+  {
+    "id": "feitian",
+    "chineseName": "飞天诚信",
+    "displayName": "FEITIAN",
+    "sourcePage": "https://portal.ftsafe.com/",
+    "status": "official-asset",
+    "assetUrl": "https://portal.ftsafe.com/wp-content/uploads/2023/09/FEITIAN.svg",
+    "mimeType": "image/svg+xml",
+    "localAsset": "assets/brand-logos/feitian.svg"
+  },
+  {
+    "id": "topwise",
+    "chineseName": "鼎智",
+    "displayName": "Topwise",
+    "sourcePage": "https://www.topwisesz.com/",
+    "status": "text-fallback",
+    "note": "Official homepage verified, logo not retrieved from JS application; use text fallback.",
+    "localAsset": null
+  },
+  {
+    "id": "wiseasy",
+    "chineseName": "微智全景",
+    "displayName": "Wiseasy",
+    "sourcePage": "https://www.wiseasy.com/",
+    "status": "official-asset",
+    "assetUrl": "https://resource.wiseasy.com/www-v4/uploads/upload/images/20250819/a2c8b5238ef73ceb360e31eda5316f7c.svg",
+    "mimeType": "image/svg+xml",
+    "localAsset": "assets/brand-logos/wiseasy.svg"
+  },
+  {
+    "id": "telpo",
+    "chineseName": "天波",
+    "displayName": "Telpo",
+    "sourcePage": "https://www.telpo.com/",
+    "status": "official-asset",
+    "assetUrl": "https://www.telpo.com/wp-content/uploads/2026/01/Telpo_logo_2x.png",
+    "mimeType": "image/png",
+    "aliases": [
+      "Telepower"
+    ],
+    "note": "Current official logo reads Telpo 天波.",
+    "localAsset": "assets/brand-logos/telpo.png"
+  },
+  {
+    "id": "imin",
+    "chineseName": "一敏",
+    "displayName": "iMin",
+    "sourcePage": "https://www.imintech.cn/zh/",
+    "status": "official-asset",
+    "assetUrl": "https://www.imintech.cn/wp-content/uploads/2025/03/iMin-logo.svg",
+    "mimeType": "image/svg+xml",
+    "note": "Official Chinese site confirms 一敏 = iMin.",
+    "localAsset": "assets/brand-logos/imin.svg"
+  }
+]
